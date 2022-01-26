@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const setPokemons = (payload) => (dispatch) => {
-  axios.get("http://localhost:3001/pokemons").then((res) =>
+  axios.get("https://pipokemonapi.herokuapp.com/pokemons").then((res) =>
     dispatch({
       type: "SET_POKEMONS",
       payload: res.data,
@@ -19,7 +19,7 @@ export const sortPokemons = (order) => {
 export function catchPokemon(search) {
   return function (dispatch) {
     axios
-      .get(`http://localhost:3001/pokemons?name=${search}`)
+      .get(`https://pipokemonapi.herokuapp.com/pokemons?name=${search}`)
       .then((res) => {
         dispatch({
           type: "CATCH_POKEMON",
@@ -51,7 +51,7 @@ export const filterCreated = (selected) => {
 
 export const selectedPokemon = (selected) => (dispatch) => {
   axios
-    .get(`http://localhost:3001/pokemons/${selected}`)
+    .get(`https://pipokemonapi.herokuapp.com/pokemons/${selected}`)
     .then((res) =>
       dispatch({
         type: "POKEMON_DETAIL",
@@ -64,7 +64,7 @@ export const selectedPokemon = (selected) => (dispatch) => {
 };
 
 export const setTypes = (payload) => (dispatch) => {
-  axios.get("http://localhost:3001/types").then((res) =>
+  axios.get("https://pipokemonapi.herokuapp.com/types").then((res) =>
     dispatch({
       type: "POKEMON_TYPES",
       payload: res.data,
