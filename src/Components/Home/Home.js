@@ -6,11 +6,8 @@ import {
   catchPokemon,
   filterByType,
   filterCreated,
-  sortByName,
-  sortByStrength,
   sortPokemons,
 } from "../../Actions/index.js";
-import { useLocation } from "react-router-dom";
 
 const Home = () => {
   const allTypes = useSelector((store) => {

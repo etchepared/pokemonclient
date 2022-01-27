@@ -3,13 +3,10 @@ import { useDispatch } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { setPokemons, setTypes } from "../../Actions";
 import Home from "../MyImages/Home.png";
-import Reset from "../MyImages/ResetFilters.png";
-import ash from "../MyImages/3770952.jpg";
 import "./toHome.css";
 
 const ToHome = () => {
   const dispatch = useDispatch();
-  const location = useLocation();
 
   useEffect(() => {
     dispatch(setPokemons());
