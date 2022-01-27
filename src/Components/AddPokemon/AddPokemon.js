@@ -48,7 +48,10 @@ export default function AddPokemon() {
   async function onSubmit(e) {
     try {
       e.preventDefault();
-      await axios.post("http://localhost:3001/pokemons/create", myPokemon);
+      await axios.post(
+        "https://pipokemonapi.herokuapp.com/pokemons/create",
+        myPokemon
+      );
       setPokemons({
         name: "",
         hp: "",
@@ -71,8 +74,6 @@ export default function AddPokemon() {
         weight: "",
         types: [],
       });
-      //window.location.href = "http://localhost:3000/home";
-      //window.location.href = "http://localhost:3000/create";
     } catch (error) {
       alert("Pokemon creation failed.");
     }
