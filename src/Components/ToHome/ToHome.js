@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { setPokemons, setTypes } from "../../Actions";
 import Home from "../MyImages/Home.png";
 import "./toHome.css";

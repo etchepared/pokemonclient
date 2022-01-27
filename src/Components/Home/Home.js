@@ -104,7 +104,8 @@ const Home = () => {
             <button
               id="select"
               onClick={() =>
-                (window.location.href = "http://localhost:3000/home")
+                (window.location.href =
+                  "https://pokemonclient.herokuapp.com/home")
               }
             >
               Reset filters
